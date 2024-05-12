@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to My Portfolio</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#resume">Resume</a></li>
+                <li><a href="#fun-facts">Fun Facts</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        
+    </header>
+    <section id="about">
+        <h2>About Me</h2>
+        <p>This section will contain information about you, your interests, skills, and background.</p>
+    </section>
+    <section id="resume">
+        <h2>Resume</h2>
+        <a href="assets/resume.pdf" target="_blank">Download my resume</a>
+
+    </section>
+    <section id="projects">
+        <h2>My Projects</h2>
+        <p>Here you will showcase your projects. Initially, you can describe any small projects or even tutorial projects you have completed.</p>
+    </section>
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <p>Details on how to contact you. This could include a form, your email address, and links to your social media profiles.</p>
+    </section>
+
+    <section id="fun-facts">
+        <h2>Fun Facts About Me</h2>
+        <p id="funFactDisplay">Here will be a fun fact about me.</p>
+        <button onclick="showRandomFact()">Tell Me More!</button>
+    </section>
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <form id="contactForm">
+            <input type="text" id="email" placeholder="Enter your email" required>
+            <textarea id="message" placeholder="Your message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </section>
+    
+    
+    
+    <footer>
+        <p>Copyright &copy; 2023 by [Your Name]. All rights reserved.</p>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>
