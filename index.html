@@ -8,21 +8,27 @@
 </head>
 <body>
     <header>
-        <h1>Welcome to My Portfolio</h1>
+        <div class="profile-container">
+            <img src="assets/profile-pic.jpeg" alt="Harris K. Musungu" class="profile-photo">
+            <div class="profile-text">
+                <h1>Harris K. Musungu</h1>
+                <p>Computer Science & Cybersecurity major</p>
+            </div>
+        </div>
         <nav>
             <ul>
                 <li><a href="#about">About</a></li>
                 <li><a href="#projects">Projects</a></li>
-                <li><a href="#resume">Resume</a></li>
-                <li><a href="#fun-facts">Fun Facts</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
-        
     </header>
+    
     <section id="about">
-        <h2>About Me</h2>
-        <p>This section will contain information about you, your interests, skills, and background.</p>
+        <button class="accordion">About Me</button>
+        <div class="panel">
+            <p>Hello! I am an aspiring Software Engineer. This section will contain more detailed information about your background, interests, and professional skills.</p>
+        </div>
     </section>
     <section id="resume">
         <h2>Resume</h2>
@@ -32,10 +38,6 @@
     <section id="projects">
         <h2>My Projects</h2>
         <p>Here you will showcase your projects. Initially, you can describe any small projects or even tutorial projects you have completed.</p>
-    </section>
-    <section id="contact">
-        <h2>Contact Me</h2>
-        <p>Details on how to contact you. This could include a form, your email address, and links to your social media profiles.</p>
     </section>
 
     <section id="fun-facts">
@@ -50,6 +52,10 @@
             <textarea id="message" placeholder="Your message" required></textarea>
             <button type="submit">Send</button>
         </form>
+    </section>
+    <section id="link">
+        <h2>My Links</h2>
+        <p>Here you will showcase your projects. Initially, you can describe any small projects or even tutorial projects you have completed.</p>
     </section>
     
     

@@ -15,27 +15,38 @@ body {
     color: #333;
 }
 
-header {
-    background: #333;
-    color: #fff;
-    padding: 10px 20px;
-    text-align: center;
-}
-
-header nav ul {
-    padding: 10px;
+.profile-container {
     display: flex;
-    justify-content: center;
+    align-items: center; /* Vertical alignment */
+    margin-bottom: 20px; /* Optional: Adds some space below the profile container */
 }
 
-header nav ul li {
-    margin: 0 15px;
+.profile-photo {
+    width: 200px; /* Adjust based on your preference */
+    height: 200px;
+    border-radius: 50%; /* Makes the image round */
+    margin-right: 20px; /* Adds some space between the image and the text */
+    object-fit: cover;
 }
 
-header nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
+.profile-text h1, .profile-text p {
+    margin: 0; /* Removes default margin */
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+nav ul li {
+    display: inline;
+    margin-left: 20px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between; /* Aligns the profile and nav to opposite ends */
+    align-items: center;
+    padding: 20px; /* Adjust padding as needed */
 }
 
 section {
@@ -53,8 +64,49 @@ footer {
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
-    header nav ul {
-        flex-direction: column;
+@media (max-width: 600px) {
+    .profile-container {
+        flex-direction: column; /* Stacks flex items vertically on small screens */
+        align-items: center; /* Center-aligns the items when stacked */
     }
+    .profile-photo {
+        margin-right: 0; /* Removes the margin between image and text on small screens */
+        margin-bottom: 10px; /* Adds some space below the image */
+    }
+}
+
+.accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+}
+
+.active, .accordion:hover {
+    background-color: #ccc;
+}
+
+.panel {
+    padding: 0 18px;
+    display: none;
+    background-color: white;
+    overflow: hidden;
+}
+/* Apply to all section elements you want to animate */
+.section {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* Class to add when the section is in view */
+.section.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
