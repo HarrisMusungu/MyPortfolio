@@ -3,66 +3,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="css/main.css">
+    <title>Harris K. Musungu's Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullpage.js/3.1.2/fullpage.min.css">
+    <link rel="stylesheet" href="css/main.css"> <!-- Ensure this is correctly linked -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullpage.js/3.1.2/fullpage.min.js"></script>
 </head>
 <body>
-    <header>
-        <div class="profile-container">
-            <img src="assets/profile-pic.jpeg" alt="Harris K. Musungu" class="profile-photo">
-            <div class="profile-text">
-                <h1>Harris K. Musungu</h1>
-                <p>Computer Science & Cybersecurity major</p>
+    <div id="fullpage">
+        <div class="section" id="intro">
+            <div class="profile-container">
+                <img src="assets/profile-pic.jpeg" alt="Harris K. Musungu" class="profile-photo">
+                <div class="profile-text">
+                    <h1>Harris K. Musungu</h1>
+                    <p>Computer Science & Cybersecurity major</p>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/hmusungu/" target="_blank" title="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://github.com/HarrisMusungu" target="_blank" title="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="mailto:hmusungu03@gmail.com" title="Email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
-        <nav>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    
-    <section id="about">
-        <button class="accordion">About Me</button>
-        <div class="panel">
+        <div class="section" id="about">
+            <h2>About Me</h2>
             <p>Hello! I am an aspiring Software Engineer. This section will contain more detailed information about your background, interests, and professional skills.</p>
         </div>
-    </section>
-    <section id="resume">
-        <h2>Resume</h2>
-        <a href="assets/resume.pdf" target="_blank">Download my resume</a>
-
-    </section>
-    <section id="projects">
-        <h2>My Projects</h2>
-        <p>Here you will showcase your projects. Initially, you can describe any small projects or even tutorial projects you have completed.</p>
-    </section>
-
-    <section id="fun-facts">
-        <h2>Fun Facts About Me</h2>
-        <p id="funFactDisplay">Here will be a fun fact about me.</p>
-        <button onclick="showRandomFact()">Tell Me More!</button>
-    </section>
-    <section id="contact">
-        <h2>Contact Me</h2>
-        <form id="contactForm">
-            <input type="text" id="email" placeholder="Enter your email" required>
-            <textarea id="message" placeholder="Your message" required></textarea>
-            <button type="submit">Send</button>
-        </form>
-    </section>
-    <section id="link">
-        <h2>My Links</h2>
-        <p>Here you will showcase your projects. Initially, you can describe any small projects or even tutorial projects you have completed.</p>
-    </section>
-    
-    
-    
-    <footer>
-        <p>Copyright &copy; 2023 by [Your Name]. All rights reserved.</p>
-    </footer>
+        <div class="section" id="resume">
+            <h2>Resume</h2>
+            <p>Download my latest resume and see my professional background and achievements.</p>
+            <a href="assets/resume.pdf" target="_blank">Download my resume</a>
+        </div>
+        <div class="section" id="projects">
+            <h2>My Projects</h2>
+            <div class="project-container">
+                <div class="project-item">
+                    <img src="path_to_project_image.jpg" alt="Project 1">
+                    <h3>Project Title 1</h3>
+                    <p>Description of what this project is about and what it accomplishes.</p>
+                </div>
+                <div class="project-item">
+                    <img src="path_to_project_image.jpg" alt="Project 2">
+                    <h3>Project Title 2</h3>
+                    <p>Description of what this project is about and what it accomplishes.</p>
+                </div>
+                <!-- Add more projects as needed -->
+            </div>
+        </div>
+        <div class="section" id="fun-facts">
+            <h2>Fun Facts About Me</h2>
+            <p id="funFactDisplay">Here will be a fun fact about me.</p>
+            <button onclick="showRandomFact()">Tell Me More!</button>
+        </div>
+        <div class="section" id="contact">
+            <h2>Contact Me</h2>
+            <p>Feel free to reach out for collaborations or just a chat!</p>
+            <form id="contactForm">
+                <input type="text" id="email" placeholder="Enter your email" required>
+                <textarea id="message" placeholder="Your message" required></textarea>
+                <button type="submit">Send</button>
+            </form>
+        </div>
+    </div>
     <script src="js/script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            new fullpage('#fullpage', {
+                autoScrolling: true,
+                navigation: true,
+                navigationPosition: 'right',
+                navigationTooltips: ['Intro', 'About Me', 'Resume', 'Projects', 'Fun Facts', 'Contact'],
+                showActiveTooltip: true,
+                sectionsColor: ['#f5f5f5', '#fff', '#f0f0f0', '#e6e6e6', '#ccddff'],
+                scrollHorizontally: true,
+                scrollOverflow: true,
+                css3: true,
+                easingcss3: 'ease-out',
+            });
+        });
+    </script>
 </body>
 </html>

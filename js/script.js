@@ -67,3 +67,18 @@ document.addEventListener('DOMContentLoaded', function () {
         observer.observe(section);
     });
 });
+document.addEventListener('DOMContentLoaded', () => {
+    new fullpage('#fullpage', {
+        autoScrolling: true,
+        navigation: true,
+        navigationPosition: 'right',
+        navigationTooltips: ['Intro', 'Background', 'Aspirations', 'Projects', 'Contact'],
+        showActiveTooltip: true,
+        sectionsColor: ['#f5f5f5', '#fff', '#f0f0f0', '#e6e6e6', '#ccddff'],
+        scrollHorizontally: true,
+        scrollOverflow: true,
+        css3: true,
+        easingcss3: 'ease-out',
+    });
+});
+

@@ -1,112 +1,132 @@
-/* Basic Reset */
-body, h1, h2, p, ul, li, nav {
-    margin: 0;
-    padding: 0;
-    list-style: none;
+/* Ensuring the profile photo is perfectly round */
+.profile-photo {
+    width: 200px;  /* Suitable size for the profile photo */
+    height: 200px; /* Must match the width for a circle */
+    border-radius: 50%; /* Circular border radius */
+    object-fit: cover; /* Ensures the image covers the area properly */
 }
 
-/* Basic Styling */
-body {
-    font-family: 'Arial', sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-    background: #f4f4f4;
-    color: #333;
-}
-
+/* Styling for the container holding the profile photo and text */
 .profile-container {
     display: flex;
-    align-items: center; /* Vertical alignment */
-    margin-bottom: 20px; /* Optional: Adds some space below the profile container */
+    align-items: center;
+    margin-bottom: 20px; /* Provides spacing from the next content block */
 }
 
-.profile-photo {
-    width: 200px; /* Adjust based on your preference */
-    height: 200px;
-    border-radius: 50%; /* Makes the image round */
-    margin-right: 20px; /* Adds some space between the image and the text */
-    object-fit: cover;
+/* Styling text next to the profile photo */
+.profile-text {
+    margin-left: 20px; /* Space between the image and text */
 }
 
-.profile-text h1, .profile-text p {
-    margin: 0; /* Removes default margin */
+/* Styling for social link icons */
+.social-links {
+    display: flex;
+    align-items: center; /* Aligns icons vertically with the text */
+    margin-top: 10px; /* Space above the social links */
 }
 
-nav ul {
-    list-style-type: none;
-    padding: 0;
+.social-links a {
+    color: #808080; /* Grey color for icons */
+    margin-right: 10px; /* Space between icons */
+    font-size: 24px; /* Icon size */
+    transition: color 0.3s ease-in-out; /* Smooth transition for hover effect */
 }
-nav ul li {
-    display: inline;
-    margin-left: 20px;
+
+.social-links a:hover {
+    color: #505050; /* Slightly darker grey on hover */
+}
+
+/* Media query for responsiveness on smaller screens */
+@media (max-width: 600px) {
+    .profile-photo {
+        width: 100px;
+        height: 100px; /* Smaller size for mobile to keep it round */
+    }
+
+    .social-links a {
+        font-size: 20px; /* Smaller icons on mobile */
+    }
+
+    .profile-container {
+        flex-direction: column; /* Stack photo and text vertically on small screens */
+        align-items: center; /* Center alignment for the stacked items */
+    }
+
+    .profile-text {
+        margin-left: 0; /* Remove left margin on mobile */
+        text-align: center; /* Center the text under the photo */
+    }
+}
+/* Basic color setup */
+body {
+    background-color: #f5f5f5; /* Light grey background */
+    color: #333; /* Dark grey text */
+    font-family: Arial, sans-serif;
 }
 
 header {
-    display: flex;
-    justify-content: space-between; /* Aligns the profile and nav to opposite ends */
-    align-items: center;
-    padding: 20px; /* Adjust padding as needed */
-}
-
-section {
-    margin: 20px;
+    background-color: #fff; /* White background for header */
+    color: #000; /* Black text for contrast */
     padding: 20px;
-    background: white;
-    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-footer {
-    text-align: center;
-    padding: 10px 20px;
-    background: #333;
-    color: white;
+nav ul {
+    list-style: none;
+    padding: 0;
 }
 
-/* Responsive Design */
-@media (max-width: 600px) {
-    .profile-container {
-        flex-direction: column; /* Stacks flex items vertically on small screens */
-        align-items: center; /* Center-aligns the items when stacked */
-    }
-    .profile-photo {
-        margin-right: 0; /* Removes the margin between image and text on small screens */
-        margin-bottom: 10px; /* Adds some space below the image */
-    }
+nav ul li {
+    display: inline;
+    margin-right: 20px;
 }
 
-.accordion {
-    background-color: #eee;
-    color: #444;
-    cursor: pointer;
-    padding: 18px;
-    width: 100%;
-    border: none;
-    text-align: left;
-    outline: none;
-    font-size: 15px;
-    transition: 0.4s;
+nav a {
+    text-decoration: none;
+    color: #000;
 }
 
-.active, .accordion:hover {
-    background-color: #ccc;
-}
-
-.panel {
-    padding: 0 18px;
-    display: none;
-    background-color: white;
-    overflow: hidden;
-}
-/* Apply to all section elements you want to animate */
+/* Styling for sections */
 .section {
-    opacity: 0;
-    transform: translateY(50px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    text-align: center;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
-/* Class to add when the section is in view */
-.section.visible {
-    opacity: 1;
-    transform: translateY(0);
+/* Adding hover effects to links */
+a:hover {
+    color: #555;
+}
+/* Flexbox setup for project showcase */
+.project-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 40px 0;
+}
+
+.project-item {
+    flex: 1;
+    margin: 10px;
+    text-align: center; /* Center-align the text within each project */
+}
+
+.project-item img {
+    max-width: 100%;
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+.project-item:hover img {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .project-container {
+        flex-direction: column;
+    }
 }
