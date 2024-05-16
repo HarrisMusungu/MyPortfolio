@@ -1,132 +1,147 @@
-/* Ensuring the profile photo is perfectly round */
-.profile-photo {
-    width: 200px;  /* Suitable size for the profile photo */
-    height: 200px; /* Must match the width for a circle */
-    border-radius: 50%; /* Circular border radius */
-    object-fit: cover; /* Ensures the image covers the area properly */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* General Body and Background Settings */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #121212; /* Very dark grey for background */
+    color: #ffffff; /* White for text */
+    line-height: 1.6;
 }
 
-/* Styling for the container holding the profile photo and text */
+
+/* Header and Profile Styling */
+header {
+    background-color: #282828;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.profile-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 20px;
+}
+
 .profile-container {
     display: flex;
     align-items: center;
-    margin-bottom: 20px; /* Provides spacing from the next content block */
 }
 
-/* Styling text next to the profile photo */
-.profile-text {
-    margin-left: 20px; /* Space between the image and text */
-}
-
-/* Styling for social link icons */
-.social-links {
+.header-content {
     display: flex;
-    align-items: center; /* Aligns icons vertically with the text */
-    margin-top: 10px; /* Space above the social links */
+    justify-content: space-between;
+    width: 100%;
 }
 
-.social-links a {
-    color: #808080; /* Grey color for icons */
-    margin-right: 10px; /* Space between icons */
-    font-size: 24px; /* Icon size */
-    transition: color 0.3s ease-in-out; /* Smooth transition for hover effect */
+.profile-text h1, .profile-text p {
+    margin: 0;
 }
 
-.social-links a:hover {
-    color: #505050; /* Slightly darker grey on hover */
+.skills-list h3, .coursework-list h3 {
+    margin: 0 0 5px 0;
 }
 
-/* Media query for responsiveness on smaller screens */
-@media (max-width: 600px) {
-    .profile-photo {
-        width: 100px;
-        height: 100px; /* Smaller size for mobile to keep it round */
-    }
-
-    .social-links a {
-        font-size: 20px; /* Smaller icons on mobile */
-    }
-
-    .profile-container {
-        flex-direction: column; /* Stack photo and text vertically on small screens */
-        align-items: center; /* Center alignment for the stacked items */
-    }
-
-    .profile-text {
-        margin-left: 0; /* Remove left margin on mobile */
-        text-align: center; /* Center the text under the photo */
-    }
-}
-/* Basic color setup */
-body {
-    background-color: #f5f5f5; /* Light grey background */
-    color: #333; /* Dark grey text */
-    font-family: Arial, sans-serif;
+.skills-list p, .coursework-list p {
+    margin: 0;
+    font-size: 0.9em;
 }
 
-header {
-    background-color: #fff; /* White background for header */
-    color: #000; /* Black text for contrast */
-    padding: 20px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+.profile-text {
+    margin-left: 20px;
+    text-align: left;
 }
 
+/* Navigation and Social Links Styling */
 nav ul {
-    list-style: none;
+    list-style-type: none;
+    display: flex;
     padding: 0;
+    margin: 0;
 }
 
 nav ul li {
-    display: inline;
-    margin-right: 20px;
+    padding: 0 10px;
 }
 
 nav a {
     text-decoration: none;
-    color: #000;
+    color: #ffffff;
+    font-weight: bold;
 }
 
-/* Styling for sections */
+.social-links a, .social-links a:visited {
+    color: #ffffff; /* Ensures social links are white */
+    margin-right: 15px;
+}
+
+/* Skills List Styling */
+.skills-list {
+    display: flex;
+    list-style: none;
+    margin-left: 20px;
+}
+
+.social-links a:hover {
+    color: #bbbbbb; /* Light grey on hover */
+}
+
+.skills-list span {
+    background-color: #333333; /* Dark background for skills */
+    color: #ffffff; /* White text for skills */
+    margin-right: 10px;
+    padding: 5px 10px;
+    border-radius: 5px; /* Rounded corners for skills */
+}
+
+/* Section Styling for FullPage Effect */
 .section {
-    text-align: center;
     padding: 40px 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    border-bottom: 1px solid #2c2c2c; /* subtle separator */
 }
 
-/* Adding hover effects to links */
-a:hover {
-    color: #555;
-}
-/* Flexbox setup for project showcase */
-.project-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    padding: 40px 0;
-}
-
-.project-item {
-    flex: 1;
-    margin: 10px;
-    text-align: center; /* Center-align the text within each project */
-}
-
-.project-item img {
-    max-width: 100%;
-    height: auto;
-    transition: transform 0.3s ease-in-out;
-}
-
-.project-item:hover img {
-    transform: scale(1.05); /* Slight zoom effect on hover */
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .project-container {
+/* Responsive Design for Mobile Devices */
+@media (max-width: 600px) {
+    .profile-container, .skills-list, .social-links, nav ul {
         flex-direction: column;
+        align-items: center;
+        text-align: center;
     }
+
+    .profile-text, .skills-list, .social-links {
+        margin-top: 10px;
+    }
+
+    nav ul li {
+        padding: 5px 0;
+    }
+}
+#fp-nav ul li a span,
+.fp-slidesNav ul li a span {
+    background: white; /* Visible navigation dots */
+}
+
+.social-links a {
+    color: white;
+    margin: 0 10px;
+    font-size: 24px;
+    vertical-align: middle; /* Aligns icons nicely with adjacent text or elements */
+}
+
+.social-links a i {
+    border: none; /* Removes any default styling that might cause visual issues */
+}
+
+/* To ensure no extra lines or borders are visible around icons */
+.social-links a, .social-links a:hover, .social-links a:visited {
+    text-decoration: none; /* Removes underline */
+    border: none; /* Removes any border */
+    box-shadow: none; /* Clears any shadow */
 }

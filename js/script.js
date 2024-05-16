@@ -2,8 +2,10 @@ const facts = [
     "I am fluent in French.",
     "I am a content creator on Social Media Platforms.",
     "I listen to every kind of music except Country.",
-    "Soemtimes, I dream of solving technical question.",
-    "I am originally from the Democratic Republic of Congo."
+    "Sometimes, I dream of solving technical question.",
+    "I am originally from the Democratic Republic of Congo.",
+    "I played Soccer and ran Track.",
+    "I love playing Chess although I suck at it."
 ];
 
 function showRandomFact() {
@@ -67,18 +69,19 @@ document.addEventListener('DOMContentLoaded', function () {
         observer.observe(section);
     });
 });
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', function() {
     new fullpage('#fullpage', {
         autoScrolling: true,
         navigation: true,
         navigationPosition: 'right',
-        navigationTooltips: ['Intro', 'Background', 'Aspirations', 'Projects', 'Contact'],
+        navigationTooltips: ['Intro', 'About Me', 'Resume', 'Projects', 'Fun Facts', 'Contact'],
         showActiveTooltip: true,
-        sectionsColor: ['#f5f5f5', '#fff', '#f0f0f0', '#e6e6e6', '#ccddff'],
+        sectionsColor: ['#333333', '#222222', '#1a1a1a', '#111111', '#0a0a0a'], // Adjusted to darker shades
         scrollHorizontally: true,
-        scrollOverflow: true,
         css3: true,
-        easingcss3: 'ease-out',
+        easingcss3: 'ease-in-out'
     });
 });
+
+
 
