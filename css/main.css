@@ -1,24 +1,23 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-/* General Body and Background Settings */
 body {
     font-family: Arial, sans-serif;
-    background-color: #121212; /* Very dark grey for background */
-    color: #ffffff; /* White for text */
+    margin: 0;
+    padding: 0;
+    background-color: #121212;
+    color: white;
     line-height: 1.6;
 }
 
-
-/* Header and Profile Styling */
 header {
-    background-color: #282828;
+    background-color: #333;
     color: white;
     padding: 20px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+}
+
+.profile-container {
+    display: flex;
     align-items: center;
 }
 
@@ -27,17 +26,12 @@ header {
     height: 150px;
     border-radius: 50%;
     object-fit: cover;
-    margin-right: 20px;
-}
-
-.profile-container {
-    display: flex;
-    align-items: center;
 }
 
 .header-content {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     width: 100%;
 }
 
@@ -45,103 +39,83 @@ header {
     margin: 0;
 }
 
+.skills-coursework-section {
+    background-color: #282828; /* Slightly lighter to differentiate */
+    padding: 20px;
+    color: white;
+}
+
+.skills-list, .coursework-list {
+    margin-bottom: 10px;
+}
+
 .skills-list h3, .coursework-list h3 {
-    margin: 0 0 5px 0;
+    margin-bottom: 5px;
+    color: #ddd;
 }
 
 .skills-list p, .coursework-list p {
     margin: 0;
-    font-size: 0.9em;
-}
-
-.profile-text {
-    margin-left: 20px;
-    text-align: left;
-}
-
-/* Navigation and Social Links Styling */
-nav ul {
-    list-style-type: none;
-    display: flex;
-    padding: 0;
-    margin: 0;
-}
-
-nav ul li {
-    padding: 0 10px;
-}
-
-nav a {
-    text-decoration: none;
-    color: #ffffff;
-    font-weight: bold;
-}
-
-.social-links a, .social-links a:visited {
-    color: #ffffff; /* Ensures social links are white */
-    margin-right: 15px;
-}
-
-/* Skills List Styling */
-.skills-list {
-    display: flex;
-    list-style: none;
-    margin-left: 20px;
-}
-
-.social-links a:hover {
-    color: #bbbbbb; /* Light grey on hover */
-}
-
-.skills-list span {
-    background-color: #333333; /* Dark background for skills */
-    color: #ffffff; /* White text for skills */
-    margin-right: 10px;
-    padding: 5px 10px;
-    border-radius: 5px; /* Rounded corners for skills */
-}
-
-/* Section Styling for FullPage Effect */
-.section {
-    padding: 40px 20px;
-    border-bottom: 1px solid #2c2c2c; /* subtle separator */
-}
-
-/* Responsive Design for Mobile Devices */
-@media (max-width: 600px) {
-    .profile-container, .skills-list, .social-links, nav ul {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
-    .profile-text, .skills-list, .social-links {
-        margin-top: 10px;
-    }
-
-    nav ul li {
-        padding: 5px 0;
-    }
-}
-#fp-nav ul li a span,
-.fp-slidesNav ul li a span {
-    background: white; /* Visible navigation dots */
 }
 
 .social-links a {
     color: white;
     margin: 0 10px;
     font-size: 24px;
-    vertical-align: middle; /* Aligns icons nicely with adjacent text or elements */
 }
 
 .social-links a i {
-    border: none; /* Removes any default styling that might cause visual issues */
+    transition: color 0.3s;
 }
 
-/* To ensure no extra lines or borders are visible around icons */
-.social-links a, .social-links a:hover, .social-links a:visited {
-    text-decoration: none; /* Removes underline */
-    border: none; /* Removes any border */
-    box-shadow: none; /* Clears any shadow */
+.social-links a:hover i {
+    color: #aaa;
+}
+
+.section {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.project-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.project-item {
+    background-color: #333;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 20px;
+    text-align: left;
+    width: 300px;
+}
+
+.project-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+    }
+
+    .skills-coursework-section .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .skills-list, .coursework-list {
+        text-align: center;
+    }
 }

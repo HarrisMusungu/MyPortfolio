@@ -18,16 +18,6 @@
                     <h1>Harris K. Musungu</h1>
                     <p>Computer Science & Cybersecurity major</p>
                 </div>
-                <div class="skills-coursework">
-                    <div class="skills-list">
-                        <h3>Programming Languages:</h3>
-                        <p>Java, Python, C, JavaScript</p>
-                    </div>
-                    <div class="coursework-list">
-                        <h3>Relevant Coursework:</h3>
-                        <p>Network Security, Data Structures, Machine Learning</p>
-                    </div>
-                </div>
                 <div class="social-links">
                     <a href="https://www.linkedin.com/in/hmusungu/" target="_blank" title="LinkedIn">
                         <i class="fab fa-linkedin"></i>
@@ -42,7 +32,20 @@
             </div>
         </div>
     </header>
-        <section id="about" class="section">
+    <div class="skills-coursework-section">
+        <div class="container">
+            <div class="skills-list">
+                <h3>Programming Languages:</h3>
+                <p>Java, Python, C, JavaScript</p>
+            </div>
+            <div class="coursework-list">
+                <h3>Relevant Coursework:</h3>
+                <p>Network Security, Data Structures, Machine Learning</p>
+            </div>
+        </div>
+    </div>
+    <div id="fullpage">
+        <div class="section" id="about">
             <div class="container">
                 <h2>About Me</h2>
                 <p>Hello! I'm <strong>Harris K. Musungu</strong>, a Computer Science & Cybersecurity major at Ashland University, graduating in 2026. I excel in both academic and practical realms, as evidenced by my GPA of 3.84 and accolades like the Outstanding Introductory Cybersecurity Student Award.</p>
@@ -51,59 +54,51 @@
                 <p><strong>Interests:</strong> Fluent in French and an active tech content creator, I am passionate about open-source projects and entrepreneurship, constantly seeking new challenges and opportunities for growth.</p>
                 <p><strong>Connect:</strong> Feel free to reach out on <a href="https://www.linkedin.com/in/hmusungu/" target="_blank">LinkedIn</a> or explore my projects on <a href="https://github.com/HarrisMusungu" target="_blank">GitHub</a>.</p>
             </div>
-        </section>
+        </div>
         <div class="section" id="resume">
-            <h2>Resume</h2>
-            <p>Download my latest resume and see my professional background and achievements.</p>
-            <a href="assets/resume.pdf" target="_blank">Download my resume</a>
+            <div class="container">
+                <h2>Resume</h2>
+                <p>Download my latest resume and see my professional background and achievements.</p>
+                <a href="assets/resume.pdf" target="_blank">Download my resume</a>
+            </div>
         </div>
         <div class="section" id="projects">
-            <h2>My Projects</h2>
-            <div class="project-container">
-                <div class="project-item">
-                    <img src="path_to_project_image.jpg" alt="Project 1">
-                    <h3>Project Title 1</h3>
-                    <p>Description of what this project is about and what it accomplishes.</p>
+            <div class="container">
+                <h2>My Projects</h2>
+                <div class="project-container">
+                    <div class="project-item">
+                        <img src="path_to_project_image.jpg" alt="Project 1">
+                        <h3>Project Title 1</h3>
+                        <p>Description of what this project is about and what it accomplishes.</p>
+                    </div>
+                    <div class="project-item">
+                        <img src="path_to_project_image.jpg" alt="Project 2">
+                        <h3>Project Title 2</h3>
+                        <p>Description of what this project is about and what it accomplishes.</p>
+                    </div>
+                    <!-- Add more projects as needed -->
                 </div>
-                <div class="project-item">
-                    <img src="path_to_project_image.jpg" alt="Project 2">
-                    <h3>Project Title 2</h3>
-                    <p>Description of what this project is about and what it accomplishes.</p>
-                </div>
-                <!-- Add more projects as needed -->
             </div>
         </div>
         <div class="section" id="fun-facts">
-            <h2>Fun Facts About Me</h2>
-            <p id="funFactDisplay">Here will be a fun fact about me.</p>
-            <button onclick="showRandomFact()">Tell Me More!</button>
+            <div class="container">
+                <h2>Fun Facts About Me</h2>
+                <p id="funFactDisplay">Here will be a fun fact about me.</p>
+                <button onclick="showRandomFact()">Tell Me More!</button>
+            </div>
         </div>
         <div class="section" id="contact">
-            <h2>Contact Me</h2>
-            <p>Feel free to reach out for collaborations or just a chat!</p>
-            <form id="contactForm">
-                <input type="text" id="email" placeholder="Enter your email" required>
-                <textarea id="message" placeholder="Your message" required></textarea>
-                <button type="submit">Send</button>
-            </form>
+            <div class="container">
+                <h2>Contact Me</h2>
+                <p>Feel free to reach out for collaborations or just a chat!</p>
+                <form id="contactForm">
+                    <input type="text" id="email" placeholder="Enter your email" required>
+                    <textarea id="message" placeholder="Your message" required></textarea>
+                    <button type="submit">Send</button>
+                </form>
+            </div>
         </div>
     </div>
     <script src="js/script.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            new fullpage('#fullpage', {
-                autoScrolling: true,
-                navigation: true,
-                navigationPosition: 'right',
-                navigationTooltips: ['Intro', 'About Me', 'Resume', 'Projects', 'Fun Facts', 'Contact'],
-                showActiveTooltip: true,
-                sectionsColor: ['#f5f5f5', '#fff', '#f0f0f0', '#e6e6e6', '#ccddff'],
-                scrollHorizontally: true,
-                scrollOverflow: true,
-                css3: true,
-                easingcss3: 'ease-out',
-            });
-        });
-    </script>
 </body>
 </html>
