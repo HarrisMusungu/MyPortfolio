@@ -14,16 +14,15 @@ document.addEventListener('DOMContentLoaded', function() {
 
 function showRandomFact() {
     const facts = [
-        "Multilingual: Fluent in French and English.",
-        "Tech Content Creator: Over 400,000 followers on YouTube and TikTok.",
-        "Avid Runner: Completed several half-marathons.",
-        "Chess Enthusiast: Enjoys challenging friends to chess games.",
-        "DIY Tech Projects: Built a computer from scratch.",
-        "Volunteer Work: Teaches computer skills at local community centers.",
-        "Gourmet Cook: Specializes in French pastries and East African cuisine.",
-        "Nature Photographer: Captures landscapes during travels.",
-        "Bookworm: Aims to read a book from every country.",
-        "Environmental Advocate: Participates in local clean-up drives."
+        "I am fluent in French and English.",
+        "I have 400,000 followers on TikTok, Instagram and Youtube.",
+        "I used to run Track and Fields and was mainly a jumper.",
+        "I love playing Chess although I suck at it.",
+        "I used to play Soccer and played LB.",
+        "I listen to all kind of music except Country.",
+        "I am a middle child.",
+        "I am neither introverted or extroverted."
+        
     ];
 
     const randomIndex = Math.floor(Math.random() * facts.length);
