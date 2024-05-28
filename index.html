@@ -5,88 +5,66 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Harris K. Musungu's Portfolio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullpage.js/3.1.2/fullpage.min.css">
     <link rel="stylesheet" href="css/main.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullpage.js/3.1.2/fullpage.min.js"></script>
 </head>
 <body>
-    <header>
+    <div class="sidebar">
         <div class="profile-container">
             <img src="assets/profile-pic.jpeg" alt="Harris K. Musungu" class="profile-photo">
-            <div class="header-content">
-                <div class="profile-text">
-                    <h1>Harris K. Musungu</h1>
-                    <p>Computer Science & Cybersecurity major</p>
-                </div>
-                <div class="social-links">
-                    <a href="https://www.linkedin.com/in/hmusungu/" target="_blank" title="LinkedIn">
-                        <i class="fab fa-linkedin"></i>
-                    </a>
-                    <a href="https://github.com/HarrisMusungu" target="_blank" title="GitHub">
-                        <i class="fab fa-github"></i>
-                    </a>
-                    <a href="mailto:hmusungu03@gmail.com" title="Email">
-                        <i class="fas fa-envelope"></i>
-                    </a>
-                </div>
-            </div>
+            <h1>Harris K. Musungu</h1>
+            <p>Computer Science & Cybersecurity major</p>
         </div>
-    </header>
-    <div class="skills-coursework-section">
-        <div class="container">
-            <div class="skills-list">
-                <h3>Programming Languages:</h3>
-                <p>Java, Python, C, JavaScript</p>
-            </div>
-            <div class="coursework-list">
-                <h3>Relevant Coursework:</h3>
-                <p>Network Security, Data Structures, Object-Oriented Programming</p>
-            </div>
+        <nav class="nav-links">
+            <a href="#about">About Me</a>
+            <a href="#resume">Resume</a>
+            <a href="#projects">Projects</a>
+            <a href="#fun-facts">Fun Facts</a>
+            <a href="#contact">Contact</a>
+        </nav>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/hmusungu/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/HarrisMusungu" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+            <a href="mailto:hmusungu03@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
         </div>
     </div>
-    <div id="fullpage">
-        <div class="section" id="about">
-            <div class="container">
-                <h2>About Me</h2>
-                <p>Hello! I'm <strong>Harris K. Musungu</strong>, currently transitioning from Ashland University to the Rochester Institute of Technology (RIT), where I am further pursuing my passion for Software Engineering and Cybersecurity. My academic journey began at Ashland University, where I developed a strong foundation in computer science and cybersecurity principles, and now, at RIT, I am excited to continue expanding my knowledge and skills.</p>
-                <p>During my time at Ashland University, I was recognized for my academic excellence and leadership, including receiving the Outstanding Introductory Cybersecurity Student Award and serving as Vice President of the National Cybersecurity Student Association. These experiences have shaped my approach to problem-solving and teamwork.</p>
-                <p>At RIT, I am immersing myself in advanced coursework and hands-on projects that bridge the gap between theoretical knowledge and practical application. I am particularly interested in areas such as Network Security, Data Structures, and Machine Learning, and I thrive in collaborative environments where I can contribute and learn from others.</p>
-                <p>Beyond academics, I am an active member of the tech community, contributing to open-source projects and participating in hackathons to challenge myself and broaden my horizons. I am always keen to stay updated with the latest industry trends and continuously seek opportunities to learn and grow.</p>
-                <p><strong>Connect:</strong> Feel free to reach out on <a href="https://www.linkedin.com/in/hmusungu/" target="_blank">LinkedIn</a> or explore my projects on <a href="https://github.com/HarrisMusungu" target="_blank">GitHub</a>.</p>
-            </div>
-        </div>
-        <div class="section" id="resume">
-            <div class="container">
-                <h2>Resume</h2>
-                <p>Download my latest resume and see my professional background and achievements.</p>
-                <a href="assets/resume.pdf" target="_blank">Download my resume</a>
-            </div>
-        </div>
-        <div class="section" id="projects">
-            <div class="container">
-                <h2>My Projects</h2>
-                <div class="project-container">
-                    <div class="project-item">
-                        <img src="path_to_project_image.jpg" alt="Project 1">
-                        <h3>Project Title 1</h3>
-                        <p>Description of what this project is about and what it accomplishes.</p>
-                    </div>
-                    <div class="project-item">
-                        <img src="path_to_project_image.jpg" alt="Project 2">
-                        <h3>Project Title 2</h3>
-                        <p>Description of what this project is about and what it accomplishes.</p>
-                    </div>
-                    <!-- Add more projects as needed -->
+    <div class="main-content">
+        <section id="about" class="section">
+            <h2>About Me</h2>
+            <p>Hello! I'm <strong>Harris K. Musungu</strong>, currently transitioning from Ashland University to the Rochester Institute of Technology (RIT), where I am further pursuing my passion for Software Engineering and Cybersecurity. My academic journey began at Ashland University, where I developed a strong foundation in computer science and cybersecurity principles, and now, at RIT, I am excited to continue expanding my knowledge and skills.</p>
+            <!-- Rest of the about me section -->
+        </section>
+        <section id="resume" class="section">
+            <h2>Resume</h2>
+            <p>Download my latest resume and see my professional background and achievements.</p>
+            <a href="assets/resume.pdf" target="_blank">Download my resume</a>
+        </section>
+        <section id="projects" class="section">
+            <h2>My Projects</h2>
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <!-- Swiper slides for projects -->
                 </div>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination"></div>
+                <!-- Add Navigation -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
             </div>
-        </div>
-        <div class="section" id="fun-facts">
-            <div class="container">
-                <h2>Fun Facts About Me</h2>
-                <p id="funFactDisplay">Here will be a fun fact about me.</p>
-                <button onclick="showRandomFact()">Tell Me More!</button>
-            </div>
-        </div>
+        </section>
+        <section id="fun-facts" class="section">
+            <h2>Fun Facts About Me</h2>
+            <p id="funFactDisplay">Here will be a fun fact about me.</p>
+            <button onclick="showRandomFact()">Tell Me More!</button>
+        </section>
+        <section id="contact" class="section">
+            <h2>Contact Me</h2>
+            <p>Feel free to reach out for collaborations or just a chat!</p>
+            <form id="contactForm">
+                <input type="text" id="email" placeholder="Enter your email" required>
+                <textarea id="message" placeholder="Your message" required></textarea>
+                <button type="submit">Send</button>
+            </form>
+        </section>
     </div>
     <script src="js/script.js"></script>
 </body>
