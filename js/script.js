@@ -1,4 +1,16 @@
 document.addEventListener('DOMContentLoaded', function() {
+    new fullpage('#fullpage', {
+        autoScrolling: true,
+        navigation: true,
+        navigationPosition: 'right',
+        navigationTooltips: ['Intro', 'About Me', 'Resume', 'Projects', 'Fun Facts', 'Contact'],
+        showActiveTooltip: true,
+        sectionsColor: ['#333', '#444', '#555', '#666', '#777'],
+        scrollHorizontally: true,
+        css3: true,
+        easingcss3: 'ease-in-out'
+    });
+
     var swiper = new Swiper('.swiper-container', {
         slidesPerView: 1,
         spaceBetween: 10,
@@ -13,7 +25,6 @@ document.addEventListener('DOMContentLoaded', function() {
         loop: true
     });
 });
-
 function showRandomFact() {
     const facts = [
         "I am fluent in French and English.",

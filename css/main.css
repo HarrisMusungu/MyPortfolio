@@ -56,6 +56,27 @@ body {
     background-color: #333;
 }
 
+.skills-container {
+    width: 100%;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.skills-icons i {
+    font-size: 24px;
+    margin: 0 10px;
+}
+
+.skills-container ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+.skills-container ul li {
+    margin-bottom: 5px;
+}
+
 .social-links {
     display: flex;
     justify-content: space-around;
@@ -89,17 +110,17 @@ h2 {
 }
 
 a {
-    color: #1DB954; /* Spotify green */
+    color:  #621ed7;
     text-decoration: none;
     transition: color 0.3s;
 }
 
 a:hover {
-    color: #1ed760;
+    color: #621ed7;
 }
 
 button {
-    background-color: #1DB954;
+    background-color: 621ed7;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -108,7 +129,7 @@ button {
 }
 
 button:hover {
-    background-color: #1ed760;
+    background-color: #621ed7;
 }
 
 /* Swiper styles */

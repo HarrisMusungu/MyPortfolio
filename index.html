@@ -5,7 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Harris K. Musungu's Portfolio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/main.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullpage.js/3.1.2/fullpage.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 </head>
 <body>
     <div class="sidebar">
@@ -21,6 +24,20 @@
             <a href="#fun-facts">Fun Facts</a>
             <a href="#contact">Contact</a>
         </nav>
+        <div class="skills-container">
+            <h3>Programming Languages</h3>
+            <div class="skills-icons">
+                <i class="fab fa-java" title="Java"></i>
+                <i class="fab fa-python" title="Python"></i>
+                <i class="fab fa-cuttlefish" title="C"></i>
+            </div>
+            <h3>Relevant Coursework</h3>
+            <ul>
+                <li>Network Security</li>
+                <li>Data Structures</li>
+                <li>Object-Oriented Programming</li>
+            </ul>
+        </div>
         <div class="social-links">
             <a href="https://www.linkedin.com/in/hmusungu/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
             <a href="https://github.com/HarrisMusungu" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
@@ -42,11 +59,32 @@
             <h2>My Projects</h2>
             <div class="swiper-container">
                 <div class="swiper-wrapper">
-                    <!-- Swiper slides for projects -->
+                    <div class="swiper-slide">
+                        <div class="project-item">
+                            <img src="path_to_portfolio_image.jpg" alt="Portfolio Website">
+                            <h3>Portfolio Website</h3>
+                            <p>This portfolio website showcasing my work, skills, and background.</p>
+                            <a href="https://github.com/HarrisMusungu/MyPortfolio" target="_blank">Live Demo</a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="project-item">
+                            <img src="path_to_project_image1.jpg" alt="Project 1">
+                            <h3>Project Title 1</h3>
+                            <p>Description of what this project is about and what it accomplishes.</p>
+                            <a href="https://github.com/HarrisMusungu/project1" target="_blank">Live Demo</a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="project-item">
+                            <img src="path_to_project_image2.jpg" alt="Project 2">
+                            <h3>Project Title 2</h3>
+                            <p>Description of what this project is about and what it accomplishes.</p>
+                            <a href="https://github.com/HarrisMusungu/project2" target="_blank">Live Demo</a>
+                        </div>
+                    </div>
                 </div>
-                <!-- Add Pagination -->
                 <div class="swiper-pagination"></div>
-                <!-- Add Navigation -->
                 <div class="swiper-button-next"></div>
                 <div class="swiper-button-prev"></div>
             </div>
@@ -55,15 +93,6 @@
             <h2>Fun Facts About Me</h2>
             <p id="funFactDisplay">Here will be a fun fact about me.</p>
             <button onclick="showRandomFact()">Tell Me More!</button>
-        </section>
-        <section id="contact" class="section">
-            <h2>Contact Me</h2>
-            <p>Feel free to reach out for collaborations or just a chat!</p>
-            <form id="contactForm">
-                <input type="text" id="email" placeholder="Enter your email" required>
-                <textarea id="message" placeholder="Your message" required></textarea>
-                <button type="submit">Send</button>
-            </form>
         </section>
     </div>
     <script src="js/script.js"></script>
