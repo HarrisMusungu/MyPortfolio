@@ -94,6 +94,17 @@
             <p id="funFactDisplay">Here will be a fun fact about me.</p>
             <button onclick="showRandomFact()">Tell Me More!</button>
         </section>
+        <section id="contact" class="section">
+            <h2>Contact Me</h2>
+            <p>Feel free to reach out for collaborations or just a chat!</p>
+            <form id="contactForm">
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                <textarea id="message" name="message" placeholder="Your message" required></textarea>
+                <button type="submit">Send</button>
+            </form>
+            <p id="formMessage"></p>
+        </section>
     </div>
     <script src="js/script.js"></script>
 </body>

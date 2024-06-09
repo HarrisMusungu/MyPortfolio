@@ -16,26 +16,26 @@ document.addEventListener('DOMContentLoaded', function() {
         spaceBetween: 10,
         navigation: {
             nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev'
+            prevEl: '.swiper-button-prev',
         },
         pagination: {
             el: '.swiper-pagination',
-            clickable: true
+            clickable: true,
         },
-        loop: true
+        loop: true,
     });
 });
+
 function showRandomFact() {
     const facts = [
         "I am fluent in French and English.",
-        "I have 400,000 followers on TikTok, Instagram and Youtube.",
+        "I have 400,000 followers on TikTok, Instagram, and YouTube.",
         "I used to run Track and Fields and was mainly a jumper.",
         "I love playing Chess although I suck at it.",
         "I used to play Soccer and played LB.",
-        "I listen to all kind of music except Country.",
+        "I listen to all kinds of music except Country.",
         "I am a middle child.",
-        "I am neither introverted or extroverted."
-        
+        "I am neither introverted nor extroverted."
     ];
 
     const randomIndex = Math.floor(Math.random() * facts.length);
